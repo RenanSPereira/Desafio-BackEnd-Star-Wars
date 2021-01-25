@@ -9,4 +9,6 @@ class PlanetSerializer(serializers.ModelSerializer):
             'name', 
             'climate', 
             'terrain',
+            'created',
+            'edited',
         ]

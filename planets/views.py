@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import routers, serializers, viewsets
+from .models import Planet
+from .serializer import PlanetSerializer
 
-# Create your views here.
+class PlanetViewSet(viewsets.ModelViewSet):
+    queryset = Planet.objects.all()
+    serializer_class = PlanetSerializer
